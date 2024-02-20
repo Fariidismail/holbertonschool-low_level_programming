@@ -1,9 +1,12 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <time.h>
+#include <stdio.h>
 
 /**
  * main - Entry point
+ *
+ * This function generates a random number and determines if it's positive,
+ * negative, or zero.
  *
  * Return: Always 0 (Success)
  */
@@ -13,19 +16,20 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	printf("Last digit of %d", n);
-	n = n%10;
-	if(n > 5)
+	if (n % 10 > 5)
 	{
-		printf(" is %d and is greater than 5", n);
+		printf("Last digit of %d is %d and is ", n, abs(n) % 10);
+		printf("greater than 5\n");
 	}
-	else if(n == 0)
+	else if (abs(n) % 10 == 0)
 	{
-		printf(" is %d and is 0", n);
+		printf("Last digit of %d is %d and is ", n, abs(n) % 10);
+		printf("0\n");
 	}
-	else 
+	else if (n % 10 < 6 && abs(n) != 0)
 	{
-		printf(" is %d and is less than 6 and not 0", n);
+		printf("Last digit of %d is %d and is ", n, n % 10);
+		printf("less than 6 and not 0\n");
 	}
 	return (0);
 }
