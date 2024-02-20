@@ -1,11 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*
+/**
  * main - Entry point
  *
- * This function prints all numbers from 0 to 9
+ * This function generates a random number and determines if it's positive,
+ * negative, or zero.
  *
- * Return: 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
