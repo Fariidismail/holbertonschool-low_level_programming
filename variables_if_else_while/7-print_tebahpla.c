@@ -10,15 +10,15 @@
  */
 int main(void)
 {
-	char lowercase = 'z';
-	
-	while (lowercase >= 'a')
+	int num = 122;
+
+	while (num > 96)
 	{
-		putchar(lowercase);
-		lowercase--;
+		putchar(num);
+		num--;
 	}
 
-	putchar('\n');
+	putchar ('\n');
 
 	return (0);
 
