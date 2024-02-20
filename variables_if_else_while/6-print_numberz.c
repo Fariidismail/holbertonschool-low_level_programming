@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 /*
- * main - entry point
+ * main - Entry point
  *
- * This code prints all numbers from 0 to 9
+ * This function prints all numbers from 0 to 9
  *
- * Return 0
+ * Return: 0
  */
 int main(void)
 {
