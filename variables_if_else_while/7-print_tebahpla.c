@@ -11,6 +11,7 @@
 int main(void)
 {
 	char lowercase = 'z';
+	
 	while (lowercase >= 'a')
 	{
 		putchar(lowercase);
