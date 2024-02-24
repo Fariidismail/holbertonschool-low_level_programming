@@ -1,11 +1,12 @@
 #include "main.h"
+#include <stdio.h>
+#include <ctype.h>
 /**
- * check lowercase
- *
+ * _islower - Entry point
+ * @c: The character to print
  *
  * Return: Always 0 (Success)
  */
-
 int _islower(int c)
 {
 	if (islower(c))
@@ -14,4 +15,5 @@ int _islower(int c)
 	}
 
 	return (0);
+
 }
