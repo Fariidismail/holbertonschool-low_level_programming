@@ -10,8 +10,9 @@
  */
 int _abs(int n)
 {
-	int absa;
-	absa = abs(n);
+	int absolute_num;
 
-	return (absa);
+	absolute_num = abs(n);
+
+	return (absolute_num);
 }
