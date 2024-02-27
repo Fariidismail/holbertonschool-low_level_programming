@@ -1,9 +1,11 @@
-#include <main.h>
-/*
- * main - entry point
+#include "main.h"
+/**
+ * _isupper - returns 1 if char is lowercase
  *
- * Return  : if Lower 1 else 0
- */
+ * @c: character
+ *
+ * Return: if Lower 1 else 0
+ **/
 int _isupper(int c)
 {
 	if (c >= 65 && c <= 90)
