@@ -1,6 +1,6 @@
 #include <main.h>
 /*
- * main - entry point
+ * print numbers - print numbers
  *
  * Return 0 : Sucesses
  */
