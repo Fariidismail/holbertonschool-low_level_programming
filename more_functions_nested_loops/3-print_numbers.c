@@ -1,9 +1,10 @@
-#include <main.h>
-/*
- * print numbers - print numbers
+#include "main.h"
+/**
+ * print_numbers - returns 0 to 9
  *
- * Return 0 : Sucesses
- */
+ *
+ * Return: from 0 to 9
+ **/
 void print_numbers(void)
 {
 int i;
