@@ -1,11 +1,11 @@
-#include <main.h>
-/*
- * main -entry point
+#include "main.h"
+/**
+ * _isdigit - returns 1 if digit
  *
  * @c: character
  *
- * Return: if digit 1 else 0
- */
+ * Return: 1 if digit
+ **/
 int _isdigit(int c)
 {
 	if (c >= '0' && c <= '9')
