@@ -1,34 +1,31 @@
 #include <stdio.h>
-#include "main.h"
 
 /**
- * print_triangle - Print a right-aligned triangle of '#' characters.
- * @size: The size of the triangle to be printed.
- *
- * Return: void
- */
-void print_triangle(int size)
-{
-	int i;
-	int j;
+*main- prints the largest prime factor
+*of a number
+*
+*Return: returns 0
+*/
 
-	if (size > 0)
-	{
-		for (i = 0; i < size; i++)
-		{
-			for (j = 0; j < size - (i + 1); j++)
-			{
-				putchar(' ');
-			}
-			for (j = 0; j <= i; j++)
-			{
-				putchar('#');
-			}
-			putchar('\n');
-		}
-	}
-	else
-	{
-		putchar('\n');
-	}
+int main(void)
+{
+long number = 612852475143;
+int inc;
+while (inc++ < number / 2)
+{
+if (number % inc == 0)
+{
+number /= 2;
+continue;
+}
+
+for (inc = 3; inc < number / 2; inc += 2)
+{
+if (number % inc == 0)
+number /= inc;
+
+}
+}
+printf("%ld\n", number);
+return (0);
 }
