@@ -1,30 +1,33 @@
-#include <stdio.h>
-#include <string.h>
+#include "main.h"
 /**
- * _strstr - finds the first occurrence of the substring
+ * rev_string - Entry point
  *
- * @haystack: Destination string
- * @needle: Maximum number of characters to copy from src
+ *@s: string
  *
- * Return: Pointer to the concatenated string
+ * Return: Always 0 (Success)
  */
-char *_strstr(char *haystack, char *needle)
+
+void rev_string(char *s)
 {
-	int i, j;
+	int i = 0;
+	int first;
+	int n;
+	int temp;
 
-	for (i = 0; haystack[i] != '\0'; i++)
+	while (s[i] != '\0')
 	{
-		for (j = 0; needle[j] != '\0'; j++)
-		{
-			if (haystack[i + j] != needle[j])
-				break;
-		}
-
-		if (needle[j] == '\0')
-		{
-			return (&haystack[i]);
-		}
+		i++;
 	}
 
-	return (NULL);
+	n = i - 1;
+	first = 0;
+	while (n > first)
+	{
+		temp = s[n];
+		s[n] = s[first];
+		s[first] = temp;
+		first++;
+		n--;
+	}
+
 }
