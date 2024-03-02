@@ -1,46 +1,30 @@
-#include "main.h"
+#include <stdio.h>
+#include <string.h>
 /**
-*rev_string - Reverse a string
-*@s: String to reverse
-*Return: Nothing
-*/
-void rev_string(char *s)
-{
-int i = 0, length;
-length = _strlen(s) - 1;
-while (length > i)
-{
-swap_char(s + length, s + i);
-i++;
-length--;
-}
-}
-
-/**
- *_strlen - returns the length of a string
- * @s: string
- *Return: returns lenght;
+ * _strstr - finds the first occurrence of the substring
+ *
+ * @haystack: Destination string
+ * @needle: Maximum number of characters to copy from src
+ *
+ * Return: Pointer to the concatenated string
  */
-int _strlen(char *s)
+char *_strstr(char *haystack, char *needle)
 {
-int count, inc;
-inc = 0;
-for (count = 0; s[count] != '\0'; count++)
-inc++;
+	int i, j;
 
-return (inc);
-}
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		for (j = 0; needle[j] != '\0'; j++)
+		{
+			if (haystack[i + j] != needle[j])
+				break;
+		}
 
-/**
-*swap_char - swap two characters
-*@a: first character
-*@b: second character
-*Return: nothing
-*/
+		if (needle[j] == '\0')
+		{
+			return (&haystack[i]);
+		}
+	}
 
-void swap_char(char *a, char *b)
-{
-char tmp = *a;
-*a = *b;
-*b = tmp;
+	return (NULL);
 }
