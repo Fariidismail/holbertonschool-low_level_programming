@@ -1,6 +1,6 @@
 #include "main.h"
 /*
- * _strcat - appends the src string to the dest string
+ * *_strcat - appends the src string to the dest string
  * @dest - string
  * @src - string
  * Return: char
