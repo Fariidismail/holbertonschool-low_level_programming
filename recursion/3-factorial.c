@@ -6,16 +6,16 @@
  */
 int factorial(int n)
 {
-	int sum = n;
-
-	if (n != 0)
+	if (n == 1)
 	{
-		sum *= factorial(n - 1);
-		return (sum);
-
+		return (1);
+	}
+	if (n > 0)
+	{
+		n = n * factorial(n - 1);
 	}
 	else
-	{
 		return (-1);
-	}
+
+	return (n);
 }
