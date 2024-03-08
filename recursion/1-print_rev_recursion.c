@@ -1,8 +1,7 @@
 #include "main.h"
 /**
  * _print_rev_recursion - putschar
- * @s - string
- *
+ * @s : string
  * Return : void
  */
 void _print_rev_recursion(char *s)
