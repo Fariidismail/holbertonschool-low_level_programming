@@ -8,19 +8,19 @@
  */
 int main(int argc, char *argv[])
 {
-		int result;
-		(void)argc;
+	int result;
+	(void)argc;
 
-		if (argv[1] != NULL && argv[2] != NULL)
-		{
-			result = atoi(argv[1]) * atoi(argv[2]);
-			printf("%d\n", result);
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+	if (argv[1] != NULL && argv[2] != NULL)
+	{
+		result = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", result);
+	}
+	else
+	{
+		printf("Error\n");
+		return (1);
+	}
 
-		return (0);
+	return (0);
 }
