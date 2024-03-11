@@ -1,36 +1,37 @@
-#include <limits.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "main.h"
+
 /**
- * *_strdup - returns a pointer to a newly allocated space
- * @str: stsing
- *
- * Return: char
- */
+* _strdup - returns a pointer to a newly allocated
+*space in memory, which contains a copy of the
+*string given as a parameter.
+*@str:String to be copied
+*
+*Return: NULL in case of error, pointer to allocated
+*space
+*/
+
 char *_strdup(char *str)
 {
-	char *arr;
-	int size;
-	int i;
+	char *cpy;
+	int index, len;
 
 	if (str == NULL)
-	{
 		return (NULL);
-	}
 
-	size = strlen(str) + 1;
-	arr = malloc(size * sizeof(char));
-	if (arr == NULL)
-	{
+	for (index = 0; str[index]; index++)
+		len++;
+	cpy = malloc(sizeof(char) * (len + 1));
+
+	if (cpy == NULL)
 		return (NULL);
-	}
 
-	for (i = 0; i < size; i++)
+	for (index = 0; str[index]; index++)
 	{
-		arr[i] = str[i];
+		cpy[index] = str[index];
 	}
 
-	return (arr);
+	cpy[len] = '\0';
+
+	return (cpy);
 
 }
