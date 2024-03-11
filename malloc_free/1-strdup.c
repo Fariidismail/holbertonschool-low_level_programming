@@ -10,9 +10,9 @@
  */
 char *_strdup(char *str)
 {
-	char *str2;
+	char *arr;
 	int size;
-	int i = 0;
+	int i;
 
 	if (str == NULL)
 	{
@@ -20,18 +20,17 @@ char *_strdup(char *str)
 	}
 
 	size = strlen(str) + 1;
-
-	str2 = malloc(size * sizeof(char));
-
-	if (str2 == NULL)
+	arr = malloc(size * sizeof(char));
+	if (arr == NULL)
 	{
 		return (NULL);
 	}
 
-	for(i = 0; i<size; i++)
+	for (i = 0; i < size; i++)
 	{
-		str2[i] = str[i];
+		arr[i] = str[i];
 	}
 
-	return (str2);
+	return (arr);
+
 }
