@@ -13,8 +13,28 @@ char *str_concat(char *s1, char *s2)
 {
 	int i = 0;
 	char * result;
-    
-    	result = (char *)malloc(100 * sizeof(char));
+   	char * s1adress = s1;
+	char * s2adress = s2;
+	int size = 1;
+
+
+	while(*s1 != '\0')
+    	{
+        	size++;
+        	s1++;
+    	}	
+
+	s1 = s1adress;
+
+	while (*s2 != '\0')
+	{
+		size++;
+		s2++;
+	}
+
+	s2 = s2adress;
+
+    	result =malloc(size * sizeof(char));
 
     	if (s1 == NULL)
 	{
@@ -23,20 +43,6 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 	{
 		s2 = "";
-	}
-
-    	while (*s1 != '\0')
-	{
-		result[i] = *s1;
-		i++;
-		s1++;
-	}
-
-	while (*s2 != '\0')
-	{
-		result[i] = *s2;
-		i++;
-		s2++;
 	}
 
 	result[i] = '\0';
