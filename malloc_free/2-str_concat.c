@@ -17,6 +17,15 @@ char *str_concat(char *s1, char *s2)
 	char * s2adress = s2;
 	int size = 1;
 
+	
+	if (s1 == NULL)
+	{
+		s1 = "";
+	}
+	if (s2 == NULL)
+	{
+		s2= "";
+	}
 
 	while(*s1 != '\0')
     	{
@@ -36,13 +45,17 @@ char *str_concat(char *s1, char *s2)
 
     	result =malloc(size * sizeof(char));
 
-    	if (s1 == NULL)
+    	while (*s1 != '\0')
 	{
-		s1 = "";
+		result[i] = *s1;
+		s1++;
+		i++;
 	}
-	if (s2 == NULL)
+	while (*s2 != '\0')
 	{
-		s2 = "";
+		result[i] = *s2;
+		s2++;
+		i++;
 	}
 
 	result[i] = '\0';
