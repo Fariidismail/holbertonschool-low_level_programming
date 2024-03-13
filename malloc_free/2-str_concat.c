@@ -11,23 +11,10 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int size = 1;
 	int i = 0;
 	char * result;
-
-	while (*s1 != '\0')
-	{
-		s1++;
-		size++;
-	}
-
-	while (*s2 != '\0')
-	{
-		s2++;
-		size++;
-	}
     
-    	result = (char *)malloc(size * sizeof(char));
+    	result = (char *)malloc(100 * sizeof(char));
     
     	while (*s1 != '\0')
 	{
