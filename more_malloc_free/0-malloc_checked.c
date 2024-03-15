@@ -2,7 +2,7 @@
 #include <stdlib.h>
 /**
  * malloc_checked - check whether malloc or not
- * @b - unsigned int
+ * @b: unsigned int
  *
  * Return: void
  */
