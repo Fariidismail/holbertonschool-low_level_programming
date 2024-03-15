@@ -1,27 +1,42 @@
+#include "main.h"
 #include <stdlib.h>
-
 /**
- * _calloc - Allocate memory for array of nmemb elements of size bytes
- * @nmemb: Number of elemnts
- * @size: Size in bytes of elements
- *
- * Return: Pointer to new memory, NULL if it fails
- */
-void *_calloc(unsigned int nmemb, unsigned int size)
+* string_nconcat - prints concatenate string;
+* @s1: input string.
+* @s2: input string.
+* @n: len s2 string for print.
+* Return: Nothing.
+*/
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	char *ar;
-	unsigned int ar_size, i;
+	unsigned int l1, i, e;
+	char *a;
 
-	if (nmemb == 0 || size == 0)
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+	l1 = 0;
+	while (s1[l1])
+		l1++;
+
+	a = malloc(sizeof(*a) * l1 + n + 1);
+
+	if (a == NULL)
 		return (NULL);
-	ar_size = nmemb * size;
-	ar = malloc(ar_size);
-	if (ar == NULL)
-		return (NULL);
-	while (i < ar_size)
+
+	for (i = 0, e = 0; i < (l1 + n); i++)
 	{
-		ar[i] = 0;
-		i++;
+		if (i < l1)
+		{
+			a[i] = s1[i];
+		}
+		else
+		{
+			a[i] = s2[e++];
+		}
 	}
-	return (ar);
+	a[i] = '\0';
+	return (a);
 }
