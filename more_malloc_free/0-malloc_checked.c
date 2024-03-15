@@ -4,7 +4,7 @@
  * malloc_checked - check whether malloc or not
  * @b - unsigned int
  *
- * Return : void
+ * Return: void
  */
 void *malloc_checked(unsigned int b)
 {
