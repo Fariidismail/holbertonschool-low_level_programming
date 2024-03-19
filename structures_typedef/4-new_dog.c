@@ -8,16 +8,15 @@
  * Return: 0 on success
  *
  */
-int _strlen(char *s)
-{
-	int count = 0;
+int _strlen(char *s) {
+    int length = 0;
 
-	if (s != '\0')
-	{
-		while (*(s + count) != '\0')
-			count++;
-	}
-	return (count);
+    while (*s != '\0') {
+        length++;
+        s++;
+    }
+
+    return length;
 }
 /**
  * _strcpy - copies the string with \0 to the buffer
