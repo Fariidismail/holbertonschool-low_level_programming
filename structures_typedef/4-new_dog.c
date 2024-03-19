@@ -1,32 +1,32 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
- * _strlen - returns the lenght of a string
+ * _strlen - returns the length of a string
  * @s: pointer to s
  *
- * Return: 0 on success
- *
+ * Return: length of the string
  */
-int _strlen(char *s) 
+int _strlen(char *s)
 {
-    int length = 0;
+	int length = 0;
 
-    while (*s != '\0') 
-    {
-        length++;
-        s++;
-    }
+	while (*s != '\0')
+	{
+		length++;
+		s++;
+	}
 
-    return length;
+	return (length);
 }
+
 /**
- * _strcpy - copies the string with \0 to the buffer
+ * _strcpy - copies the string with '\0' to the buffer
  * @dest: pointer to dest
  * @src: pointer to string
  *
  * Return: the pointer to dest
- *
  */
 char *_strcpy(char *dest, char *src)
 {
@@ -41,6 +41,7 @@ char *_strcpy(char *dest, char *src)
 	*(dest + i) = '\0';
 	return (dest);
 }
+
 /**
  * new_dog - creates a new dog
  * @name: name
@@ -63,7 +64,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	new_dog->name = _strcpy(new_dog->name, name);
+	_strcpy(new_dog->name, name);
 	new_dog->age = age;
 	len_owner = _strlen(owner);
 	new_dog->owner = malloc(sizeof(char) * (len_owner + 1));
@@ -73,6 +74,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	new_dog->owner = _strcpy(new_dog->owner, owner);
+	_strcpy(new_dog->owner, owner);
 	return (new_dog);
 }
+
