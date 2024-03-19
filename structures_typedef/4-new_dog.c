@@ -8,10 +8,12 @@
  * Return: 0 on success
  *
  */
-int _strlen(char *s) {
+int _strlen(char *s) 
+{
     int length = 0;
 
-    while (*s != '\0') {
+    while (*s != '\0') 
+    {
         length++;
         s++;
     }
